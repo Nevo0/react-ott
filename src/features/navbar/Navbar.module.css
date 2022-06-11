@@ -1,0 +1,95 @@
+
+.header {
+    background-color: #202020;
+    /* width: 150px; */
+    min-height: 100vh;
+  
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    padding: 1rem 0 1rem 1rem;
+    overflow: hidden;
+    border-right: 3px solid #202020;
+    transition: width 0.2s linear;
+  }
+  
+  .header .nav {
+  }
+  
+  .header .nav_list {
+    list-style: none;
+  }
+  .header .nav_list .nav_item {
+  }
+  .header .nav_list .nav_link {
+    /* display: inline-block; */
+    text-decoration: none;
+    padding: 5px 15px 5px 5px;
+    border-radius: 10px 0 0 10px;
+  
+    width: 100%;
+    transition: all 0.2s linear;
+  }
+  .header .nav_list .nav_item:hover .nav_link,
+  .header .nav_list .nav_item.active .nav_link {
+    background-color: #202020;
+  }
+  
+  .header .nav_list .nav_link {
+    display: flex;
+    align-items: center;
+  }
+  .header .nav_list .nav_link > * {
+    color: #fff;
+  }
+  .header .nav_list .nav_link .icon {
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    margin-right: 7px;
+    font-size: 18px;
+  }
+  .header .nav_list .nav_link .text {
+    display: inline-block;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    width: 130px;
+    white-space: nowrap;
+  }
+  .header.optimize .nav_list .nav_link .text {
+    width: 0px;
+  }
+  
+  .header .btn_navig {
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    background-color: #202020;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 40px;
+    text-decoration: none;
+  }
+  
+  .header .btn_navig .open,
+  .header.optimize .btn_navig .close {
+    display: none;
+  }
+  .header.optimize .btn_navig .open {
+    display: inline-block;
+  }
+  
+  .user{
+      margin-bottom: 2em;
+      margin-top: 1em;
+  }
+  .header .nav_list .user .nav_link .icon {
+    border: 1px solid white;
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+  }

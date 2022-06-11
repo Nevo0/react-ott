@@ -1,0 +1,4 @@
+.video_scroller{
+  display: grid;
+  grid-auto-flow: column;
+}
