@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -20,12 +19,14 @@
 
 .App-header {
   min-height: 100vh;
-  display: flex;  
+  display: flex;
+  flex-direction: column;
   font-size: calc(10px + 2vmin);
+  overflow-x: hidden;
 }
 
-
-ul,li{
+ul,
+li {
   list-style-type: none;
   margin: 0;
   padding: 0;

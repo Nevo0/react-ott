@@ -1,9 +1,15 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/home/homeSlice';
+import authReducer from '../features/auth/authorizationSlice';
+import browseReducer from '../features/browse/browseSlice';
+import singleVideoInfoeReducer from '../features/singleVideo/singleVideoSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+   
+    auth: authReducer,
+    browse: browseReducer,
+    videoInfoe: singleVideoInfoeReducer,
   },
 });
 

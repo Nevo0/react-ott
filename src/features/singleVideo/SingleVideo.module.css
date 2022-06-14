@@ -1,0 +1,44 @@
+.splashBody {
+  width: 100vw;
+  display: flex;
+  background-color: #202020;
+  color: #ffffff;
+}
+.singlehBody {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reactPlayer {
+  margin-top: 2em;
+  max-width: 900px;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.single {
+  margin-top: 2em;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.videoInfo {
+}
+.singleHeader {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding-right: 1em;
+}
+.singleHeader img {
+  width: 100%;
+}
+.singleHeader .videoInfo {
+  margin-left: 1em;
+}
+.description {
+  font-size: 0.7em;
+  margin-top: 1em;
+}
+.title {
+  line-height: 1;
+}

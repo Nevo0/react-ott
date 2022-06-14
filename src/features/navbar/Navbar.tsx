@@ -1,63 +1,67 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
 export function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
 
-    const [showMenu, setShowMenu] = useState(false);
-  
-  const handleToggleClass = (event: any) => {
-    console.log("xxx");
-    
-    // onChange={(e) => handleSetMaterial(e)
-    setShowMenu(showMenu=> !showMenu)
- }
-    return (
-        <header id="header" className={`${styles.header} ${showMenu ? styles.optimize : ''}`
-}>
+  const handleToggleClass = () => {
+    setShowMenu((showMenu) => !showMenu);
+  };
+  return (
+    <header
+      id="header"
+      className={`${styles.header} ${showMenu ? styles.optimize : ""}`}
+    >
       <nav className={styles.nav}>
         <ul className={styles.nav_list}>
           <li className={`${styles.nav_item} ${styles.user}`}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/login`} key={"Home"}>
               <i className={`fas fa-user ${styles.icon}`}></i>
               <span className={styles.text}>User</span>
-            </a>
+            </Link>
           </li>
           <li className={styles.nav_item}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/`} key={"Home"}>
               <i className={`fas fa-search ${styles.icon}`}></i>
               <span className={styles.text}>Search</span>
-            </a>
+            </Link>
           </li>
           <li className={styles.nav_item}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/`} key={"Home"}>
               <i className={`fas  fa-home ${styles.icon}`}></i>
               <span className={styles.text}>Home</span>
-            </a>
+            </Link>
           </li>
           <li className={styles.nav_item}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/`} key={"Home"}>
               <i className={`fas fa-play ${styles.icon}`}></i>
               <span className={styles.text}>Live</span>
-            </a>
+            </Link>
           </li>
           <li className={styles.nav_item}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/`} key={"Home"}>
               <i className={`fas  fa-tv ${styles.icon}`}></i>
               <span className={styles.text}>VOD</span>
-            </a>
+            </Link>
           </li>
           <li className={styles.nav_item}>
-            <a href="#" className={styles.nav_link}>
+            <Link className={styles.nav_link} to={`/`} key={"Home"}>
               <i className={`fas fa-cog ${styles.icon}`}></i>
               <span className={styles.text}>Setings</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
-            <a id="btn_navig" className={styles.btn_navig} onClick={(e) => handleToggleClass(e)}>
-        <i className={`fas fa-bars open ${styles.icon}`}></i>
-        <i className={`fas fa-times close ${styles.icon}`}></i>
+      <a
+        href=""
+        id="btn_navig"
+        className={styles.btn_navig}
+        onClick={() => handleToggleClass()}
+      >
+        <i className={`fas fa-bars ${styles.open} ${styles.icon}`}></i>
+        <i className={`fas fa-times ${styles.close} ${styles.icon}`}></i>
       </a>
     </header>
   );
